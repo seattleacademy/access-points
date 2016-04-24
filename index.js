@@ -68,7 +68,7 @@ IW.prototype.scan = function (cb) {
             //http://stackoverflow.com/questions/15797920/how-to-convert-wifi-signal-strength-from-quality-percent-to-rssi-dbm
             current.signal = Math.min(Math.max(2 * (qualitydBm + 100), 0), 100);
             //Such devices give quality as a fraction of 70.  Convert to percentage.
-            current.quality = current.quality * Math.round(100 / 70);
+            current.quality = Math.round(current.quality * 100 / 70);
         }
         }
     }
