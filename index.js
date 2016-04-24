@@ -8,12 +8,11 @@ module.exports = function (iface) {
 };
 
 function IW (iface) {
-    if (!(this instanceof IW)) return new IW(iface);
-    this.iface = iface;
+    if (!(this instanceof IW)) return new IW();
 }
 
 IW.prototype.scan = function (cb) {
-    var ps = spawn('iwlist', [ this.iface, 'scan' ]);
+    var ps = spawn('iwlist', ['scan']);
     
     var line = '';
     ps.stdout.on('data', function ondata (buf) {

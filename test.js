@@ -1,2 +1,2 @@
-var iw = require('./index')('wlan0');
+var iw = require('./index')();
 iw.scan(console.log);
