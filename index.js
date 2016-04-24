@@ -2,9 +2,6 @@
 
 var spawn = require('child_process').spawn;
 var exec = require('child_process').exec;
-var EventEmitter = require('events').EventEmitter;
-var http = require('http')
-var dns = require('dns')
 
 module.exports = function (iface) {
     return new IW(iface);
@@ -14,9 +11,6 @@ function IW (iface) {
     if (!(this instanceof IW)) return new IW(iface);
     this.iface = iface;
 }
-
-IW.prototype = new EventEmitter;
-
 
 IW.prototype.scan = function (cb) {
     var ps = spawn('iwlist', [ this.iface, 'scan' ]);
