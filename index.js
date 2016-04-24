@@ -60,6 +60,10 @@ IW.prototype.scan = function (cb) {
         if (m = /Channel(.+)\)/.exec(line)) {
             current.channel = +m[1];
         }
+        //not all devices present channel in same way
+        if (m = /Channel:(.+)/.exec(line)) {
+            current.channel = +m[1];
+        }
         if (m = /Quality=(.+?)\//.exec(line)) {
           current.quality = +m[1]
         }
