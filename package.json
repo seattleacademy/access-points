@@ -1,0 +1,20 @@
+{
+  "name": "access-points",
+  "version": "0.0.1",
+  "description": "scans and returns info on wirelss access points",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seattleacademy/access-points.git"
+  },
+  "keywords": [
+    "access",
+    "points"
+  ],
+  "author": "Gary Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seattleacademy/access-points/issues"
+  },
+  "homepage": "https://github.com/seattleacademy/access-points#readme"
+}
