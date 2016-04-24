@@ -57,6 +57,9 @@ IW.prototype.scan = function (cb) {
         if (m = /^\s+ESSID:"(.+)"/.exec(line)) {
             current.essid = m[1];
         }
+        if (m = /Channel(.+)\)/.exec(line)) {
+            current.channel = +m[1];
+        }
         if (m = /Quality=(.+?)\//.exec(line)) {
           current.quality = +m[1]
         }
